@@ -3,13 +3,14 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-2138"]]
+                 [org.clojure/clojurescript "0.0-2138"]
+                 [rm-hull/monet "0.1.10"]]
 
   :plugins [[lein-cljsbuild "1.0.2"]]
 
   :source-paths ["src"]
 
-  :cljsbuild { 
+  :cljsbuild {
     :builds [{:id "flappy-clone"
               :source-paths ["src"]
               :compiler {
