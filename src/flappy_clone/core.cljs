@@ -1,7 +1,10 @@
 (ns flappy-clone.core
-  :require [monet.canvas :as canvas])
+  (:require [goog.events :as events]
+            [goog.dom :as dom]
+            [monet.canvas :as canvas]))
 
-(enable-console-print!)
-(println "Hello world!")
-
-(def canvas-dom (.getElement js/document "#canvas"))
+(defn surface []
+  (let [surface (dom/getElement "surface")]
+    [(.getContext surface "2d")
+     (. surface -width)
+     (. surface -height)]))
